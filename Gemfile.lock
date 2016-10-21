@@ -149,10 +149,12 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2016.7)
+    tzinfo-data (1.2016.8)
       tzinfo (>= 1.0.0)
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
+    validates_email_format_of (1.6.3)
+      i18n
 
 PLATFORMS
   ruby
@@ -173,6 +175,7 @@ DEPENDENCIES
   turbolinks
   tzinfo-data
   uglifier
+  validates_email_format_of
 
 BUNDLED WITH
    1.12.5

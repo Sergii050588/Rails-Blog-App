@@ -7,6 +7,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'pg'
+gem 'validates_email_format_of'
 
 gem 'jquery-rails'
 gem 'turbolinks'
