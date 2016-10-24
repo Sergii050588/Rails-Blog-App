@@ -16,17 +16,17 @@ ActiveRecord::Schema.define(version: 20161021134028) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "recipes", force: :cascade do |t|
-    t.string   "name"
-    t.text     "summary"
-    t.text     "description"
+  create_table "chefs", force: :cascade do |t|
+    t.string   "chefname"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "shefs", force: :cascade do |t|
-    t.string   "chefname"
-    t.string   "email"
+  create_table "recipes", force: :cascade do |t|
+    t.string   "name"
+    t.text     "summary"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -27,8 +27,10 @@ class ChefTest < ActiveSupport::TestCase
   end
 
   test "email must ne unique" do
-    @chef_2 = Chef.new(chefname: "McDonald", email: "McDonald@example.com")
-    assert_not @chef_2.valid?
+    chef_2 = @chef.dup
+    chef_2.email = @chef.email.upcase
+    @chef.save
+    assert_not chef_2.valid?
   end
 
   test "email must be valid" do

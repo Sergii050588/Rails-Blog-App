@@ -1,6 +1,6 @@
-class CreateShefs < ActiveRecord::Migration
+class CreateChefs < ActiveRecord::Migration
   def change
-    create_table :shefs do |t|
+    create_table :chefs do |t|
       t.string :chefname
       t.string :email
       t.timestamps
