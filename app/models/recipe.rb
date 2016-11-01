@@ -4,5 +4,6 @@ class Recipe < ActiveRecord::Base
   validates :summary, presence: true, length: { minimum: 10, maximum: 150}
   validates :description, presence: true, length: { minimum: 20, maximum: 500 }
   validates :chef_id, presence: true
+  mount_uploader :picture, PictureUploader
 
 end
