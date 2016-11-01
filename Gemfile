@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'sudo'
 
 gem 'spring',        group: :development
 
