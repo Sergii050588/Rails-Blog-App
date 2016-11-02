@@ -74,6 +74,10 @@ h2 {
   border-radius: 10px;
 }
 
+.recipe_picture_show {
+  width: 100%;
+}
+
 .well {
   background-color: #CCCCCC;
 }
@@ -87,4 +91,15 @@ input, textarea, select, .unedetable-input {
 
 input {
   height: auto !important;
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+.show_recipe {
+  margin: 10px 10px 10px 10px;
 }

@@ -2,7 +2,7 @@
 <hr/>
 
 <% @recipes.each do |recipe| %>
-    <div class="" row>
+    <div class="row" >
 
       <div class="col-md-2">
         <section class="chef_info center">
@@ -17,9 +17,9 @@
         <p>
           <span class='quiet'><small><%= time_ago_in_words(recipe.created_at) %> ago</small></span>
         </p>
-      </div>
-      <div class="col-ld-4">
-        <%= image_tag(recipe.picture.url, size: "250x150", class: "gravatar") if recipe.picture? %>
+        <div class="col-ld-4">
+          <%= image_tag(recipe.picture.url, size: "240x150", class: "gravatar") if recipe.picture? %>
+        </div>
       </div>
 
     </div>
