@@ -1,4 +1,6 @@
 <%= render 'shared/page_title', title: "All Recipes" %>
+
+<%= will_paginate %>
 <hr/>
 
 <% @recipes.each do |recipe| %>
@@ -33,3 +35,5 @@
     </div>
     <hr/>
 <% end %>
+
+<%= will_paginate %>

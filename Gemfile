@@ -8,6 +8,8 @@ gem 'coffee-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'pg'
 gem 'validates_email_format_of'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -24,6 +26,5 @@ gem 'pry'
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
