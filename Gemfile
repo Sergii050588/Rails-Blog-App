@@ -10,6 +10,7 @@ gem 'pg'
 gem 'validates_email_format_of'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'bcrypt'
 
 gem 'jquery-rails'
 gem 'turbolinks'

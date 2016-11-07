@@ -6,4 +6,6 @@ class Chef < ActiveRecord::Base
   validates :email, presence: true, uniqueness: { case_sensitive: false }
   validates_format_of :email, with: /@/
 
+  has_secure_password
+
 end

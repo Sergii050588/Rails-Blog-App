@@ -12,7 +12,7 @@
         </section>
       </div>
 
-      <div class="col-ld-6 well">
+      <div class="col-md-7 well">
         <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
         <p><%= recipe.summary %></p>
         <p>
@@ -29,6 +29,7 @@
         </p>
       </div>
         <div class="col-ld-4">
+          &nbsp&nbsp
           <%= image_tag(recipe.picture.url, size: "240x150", class: "gravatar") if recipe.picture? %>
         </div>
 
