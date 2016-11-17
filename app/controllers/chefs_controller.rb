@@ -1,19 +1,30 @@
 class ChefsController < ApplicationController
 
-	def new
-	  @chef = Chef.new
-	end
+  def new
+    @chef = Chef.new
+  end
 
-	def create
+  def create
+    @chef = Chef.create(chef_params)
+    if @chef.save
+      flash[:success] = "Your account has been created"
+      redirect_to recipes_path
+    else
+  		render 'new'
+  	  end
+  end
+   
+  def edit
 
-	end
+  end
 
-	def edit
+  def update
 
-	end
+  end
 
-	def update
+  private
 
-	end
-  
+  def chef_params
+  	params.require(:chef).permit(:chefname, :email, :password)
+  end 
 end
