@@ -12,6 +12,4 @@ Rails.application.routes.draw do
 
   get '/register', to: 'chefs#new'
 
-
- 
 end

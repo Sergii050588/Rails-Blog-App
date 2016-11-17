@@ -39,6 +39,7 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.5.1.1)
       execjs
+    bcrypt (3.1.11)
     bcrypt (3.1.11-x86-mingw32)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -160,8 +161,6 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2016.9)
-      tzinfo (>= 1.0.0)
     uglifier (3.0.3)
       execjs (>= 0.3.0, < 3)
     validates_email_format_of (1.6.3)
@@ -190,10 +189,9 @@ DEPENDENCIES
   spring
   sudo
   turbolinks
-  tzinfo-data
   uglifier
   validates_email_format_of
   will_paginate
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
