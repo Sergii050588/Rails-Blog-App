@@ -15,16 +15,27 @@ class ChefsController < ApplicationController
   end
    
   def edit
-
+    @chef = Chef.find(params[:id])
   end
 
   def update
+    @chef = Chef.find(params[:id])
+    if @chef.update(chef_params)
+      flash[:success] = "Your prifule has been updated"
+      redirect_to recipes_path # TODO change to show chefs page
+    else 
+      flash[:alert] = "Error updaing chef"
+      render :edit
+    end
+  end
 
+  def show
+    @chef = Chef.find(params[:id])
   end
 
   private
 
   def chef_params
-  	params.require(:chef).permit(:chefname, :email, :password)
+    params.require(:chef).permit(:chefname, :email, :password)
   end 
 end
