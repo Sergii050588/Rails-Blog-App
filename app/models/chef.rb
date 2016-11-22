@@ -7,5 +7,4 @@ class Chef < ActiveRecord::Base
   validates_format_of :email, with: /@/
 
   has_secure_password
-
 end

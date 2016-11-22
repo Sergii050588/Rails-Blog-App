@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- 
+
   root 'welcome#index'
 
   resources :recipes do
@@ -12,4 +12,7 @@ Rails.application.routes.draw do
 
   get '/register', to: 'chefs#new'
 
+  get '/login', to: 'logins#new'
+  post '/login', to: 'logins#create'
+  get '/logout', to: 'logins#destroy'
 end
