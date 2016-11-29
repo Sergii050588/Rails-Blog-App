@@ -7,7 +7,9 @@
     <h5>Brought to you by: <%= @recipe.chef.chefname %></h5>
   </div>
   <div class="col-md-8">
+    <% if logged_in? && @recipe.chef == current_user %>
     <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "btn btn-success pull-rigth" %>
+    <% end %>
     <h3><%= @recipe.summary %></h3>
     <div class="show_recipe">
       <%= image_tag(@recipe.picture.url, class: "recipe_picture_show") if @recipe.picture? %>
