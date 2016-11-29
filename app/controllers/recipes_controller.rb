@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :like]
+  before_action :require_user, except: [:show, :index]
   before_action :require_same_user, only: [:edit, :update]
 
   def index
@@ -15,7 +16,8 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.chef = Chef.find(19)
+    @recipe.chef = current_user
+
     if @recipe.save
       flash[:success] = "Recipe created"
       redirect_to recipes_path
@@ -37,7 +39,7 @@ class RecipesController < ApplicationController
   end
 
   def like
-    like = Like.create(like: params[:like], chef: Chef.first, recipe: @recipe)
+    like = Like.create(like: params[:like], chef: current_user, recipe: @recipe)
     if like.valid?
       flash[:success] = "Your selection was successfull"
       redirect_to :back
@@ -58,9 +60,9 @@ class RecipesController < ApplicationController
   end
 
    def require_same_user
-    if current_user != @chef
-      flash[:danger] = "You can only edit your profile"
-      redirect_to root_path
+    if current_user != @recipe.chef
+      flash[:danger] = "You can only edit your own recipes"
+      redirect_to recipes_path
     end
   end
 

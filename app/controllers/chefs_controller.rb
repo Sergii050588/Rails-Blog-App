@@ -18,7 +18,7 @@ class ChefsController < ApplicationController
       redirect_to recipes_path
     else
   		render 'new'
-  	  end
+	  end
   end
 
   def edit
@@ -27,7 +27,7 @@ class ChefsController < ApplicationController
   def update
     if @chef.update(chef_params)
       flash[:success] = "Your prifule has been updated"
-      redirect_to recipes_path # TODO change to show chefs page
+      redirect_to chef_path(@chef)
     else
       flash[:alert] = "Error updaing chef"
       render :edit
