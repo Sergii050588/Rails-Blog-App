@@ -1,5 +1,5 @@
 class ChefsController < ApplicationController
-  bedore_action :set_chef, only: [:edit, :update, :show]
+  before_action :set_chef, only: [:edit, :update, :show]
   before_action :require_same_user, only: [:edit, :update]
 
   def index
